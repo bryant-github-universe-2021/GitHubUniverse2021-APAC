@@ -11,6 +11,10 @@ jobs:
     if: ${{ github.context.issue.number < 8 }}
     
     steps:
+      - name: Print
+        run:
+          echo github.context.issue.number
+          
       - name: Close and Open issue
         uses: actions/github-script@v5
         with:
